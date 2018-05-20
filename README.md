@@ -1,7 +1,20 @@
 # Machine-Learning-on-Bankruptcy
 
-The objective of the study on bankruptcy data was to identify the best classification methodology for the given data to predict bankruptcy. The Bankruptcy data was collected from COMPUSTAT for the years 1980 to 2000 and has 5436 observations with 13 variables. For the study, as there was no clear trend in bankruptcy, it was assumed that the data across the years can be pooled together and studied. 
-Of the 13 variables, one of them was “DLRSN”- a categorical variable indicating default, the dependent variable of the prediction. Overall, the bankruptcy is about 14% of the entire sample. After the initial EDA was performed, the data was separated randomly into test and train datasets with 20-80 split. 
+The objective of the study on bankruptcy data was to identify the best classification methodology for the given data to predict bankruptcy. The Bankruptcy data was collected from COMPUSTAT for the years 1980 to 2000 and has 5436 observations with 13 variables. 
+
+The 9 accounting based variables and 1 market variable were: 
+R1: WC/TA, working capital/total assets 
+R2: RE/TA, retained earnings/total assets 
+R3: EBIT/TA, earnings before interest and tax/total assets 
+R4: ME/TL, market value of equity/total liability 
+R5: S/TA, sales/total assets 
+R6: TL/TA, total liability/total assets 
+R7: CA/CL, current assets/current liability 
+R8: NI/TA, net income/total assets 
+R9: Bankruptcy cost, Log(sales) 
+R10: Market capitalization, log(abs(price)*numbers of shares outstanding/1000) 
+
+For the study, as there was no clear trend in bankruptcy, it was assumed that the data across the years can be pooled together and studied. Of the 13 variables, one of them was “DLRSN”- a categorical variable indicating default, the dependent variable of the prediction. Overall, the bankruptcy is about 14% of the entire sample. After the initial EDA was performed, the data was separated randomly into test and train datasets with 20-80 split. 
 
 The various techniques applied for the prediction of bankruptcy were- Generalized Linear Regression- Logistic, Classification Tree, Generalized Additive Model, Linear Discriminant Analysis and Neural Networks. The models were chosen on the basis of misclassifcation errors. As per industry standard, a weight of 15 was added to penalize the False negative responses which brought down the cut off probability down to 0.06.  
 
